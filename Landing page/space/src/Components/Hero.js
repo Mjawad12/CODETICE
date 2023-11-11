@@ -105,7 +105,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <img className="button" src={bt} alt="bt-img"></img>
+        <img className="btImg" src={bt} alt="Tree"></img>
       </div>
     </section>
   );
