@@ -1,0 +1,607 @@
+@import url(./_AndyBellReset.scss);
+
+@mixin Flex($dir, $js, $ai) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $js;
+  align-items: $ai;
+}
+// varaibles
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Space Mono', monospace;
+$ff-H: "Poppins", sans-serif;
+$ff-n: "Space Mono", monospace;
+$bk-color: #241148;
+// .container {
+//   max-width: 1250px;
+//   width: 100%;
+//   margin: 0 auto;
+//   padding-inline: 1rem;
+//   position: relative;
+// }
+.scrollNone {
+  overflow: hidden;
+}
+.display-none {
+  display: none !important;
+}
+
+.leftToRightin {
+  transform: translateX(0%) !important;
+}
+
+::-webkit-scrollbar {
+  background-color: #3a68bf;
+  width: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $bk-color;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+img {
+  pointer-events: none;
+}
+.Main {
+  width: 100%;
+  background-color: $bk-color;
+}
+.MainWrapper {
+  background-color: $bk-color;
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+}
+span.sm {
+  font-family: $ff-n;
+  color: #3766e6;
+  font-size: 1rem;
+}
+h1.contentHeading {
+  font-family: $ff-H;
+  color: white;
+  font-size: 2rem;
+}
+p.contentPar {
+  font-family: $ff-H;
+  font-size: 1rem;
+  max-width: 75ch;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.462);
+  font-weight: 700;
+}
+@media (max-width: 40em) {
+  h1.contentHeading {
+    font-size: 1.5rem !important;
+    text-align: center !important;
+  }
+  p.contentPar {
+    font-size: 0.85rem !important;
+    text-align: center !important;
+  }
+}
+
+.button {
+  padding: 1rem;
+  max-width: 9rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.075);
+  border: none;
+  outline: none;
+  color: white;
+  font-family: $ff-H;
+  font-size: 0.9rem;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 18px 33px -1em #000000;
+  }
+  @media (max-width: 40em) {
+    font-size: 0.7rem;
+    max-width: 7rem;
+  }
+}
+.button2 {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  max-width: 9rem;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #c3c3de99;
+  outline: none;
+  color: white;
+  font-family: $ff-H;
+  font-size: 0.9rem;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 18px 33px -1em #000000;
+  }
+  @media (max-width: 40em) {
+    font-size: 0.7rem;
+    max-width: 7rem;
+  }
+}
+.NavbarWrapper {
+  position: absolute;
+  width: 100%;
+}
+.Navbar {
+  @include Flex(row, space-between, center);
+  position: relative;
+  top: 0;
+  z-index: 10;
+  color: white;
+  max-width: 1350px;
+  margin: auto;
+  width: 100%;
+  padding-top: 1rem;
+  padding-inline: 1rem;
+  .nav_bt {
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  .menu {
+    display: none;
+  }
+  ul {
+    @include Flex(row, space-between, center);
+    gap: 2rem;
+    font-family: $ff-n;
+    li {
+      cursor: pointer;
+      &:hover {
+        color: #3a68bf;
+      }
+    }
+  }
+  .logo {
+    h1 {
+      font-family: $ff-H;
+      font-size: 2.5rem;
+      letter-spacing: 6px;
+      cursor: pointer;
+    }
+  }
+}
+@media (max-width: 60em) {
+  .Navbar .menu {
+    display: flex;
+    max-width: 2rem;
+    z-index: 9999;
+  }
+
+  .MobNav {
+    @include Flex(column, center, center);
+    max-width: 15rem;
+    min-height: 100vh;
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    background-color: white;
+    color: black;
+    transform: translateX(-100%);
+    transition: 1s all ease;
+    .cross {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      max-width: 2.5rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    ul {
+      @include Flex(column, flex-start, flex-start);
+      padding: 0;
+      gap: 1rem;
+
+      li {
+        font-family: $ff-n;
+        font-weight: 800;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .MainNav {
+    display: none;
+  }
+}
+
+.glowingDt {
+  position: absolute;
+  z-index: 9999;
+  border-radius: 100vw;
+  box-shadow: 1px 1px 9px 5px yellow;
+  animation: glowing 1s infinite alternate;
+  bottom: 50%;
+  left: 50%;
+}
+
+.heroDiv {
+  overflow: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  background-image: url(../Components/Images/MainImg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  @media (max-width: 45em) {
+    max-height: 85vh;
+    min-height: 85vh;
+  }
+  @media (max-width: 30em) {
+    max-height: 80vh;
+    min-height: 80vh;
+  }
+
+  .btImg {
+    position: absolute;
+    bottom: 0;
+    @media (max-width: 50em) {
+      max-width: 150vw;
+    }
+    @media (max-width: 40em) {
+      max-width: 170vw;
+    }
+  }
+
+  .bottomImg {
+    @include Flex(column, center, flex-start);
+    width: 100vw;
+    min-height: 100vh;
+    height: 100%;
+    z-index: 3;
+    position: relative;
+    .heroContent {
+      @include Flex(column, flex-start, flex-start);
+      gap: 1rem;
+      width: 100%;
+      transition: 1s all ease;
+
+      .text_wrapper {
+        @include Flex(column, flex-start, flex-start);
+        gap: 1rem;
+        max-width: 1050px;
+        width: 100%;
+        padding-inline: 1rem;
+        margin: auto;
+        p {
+          font-family: $ff-H;
+          color: white;
+          letter-spacing: -0.5px;
+          word-spacing: 3px;
+        }
+        h1 {
+          font-family: $ff-n;
+          font-size: 3rem;
+          max-width: 15ch;
+          color: white;
+          line-height: 4.5rem;
+        }
+        @media (max-width: 40em) {
+          p {
+            font-family: $ff-H;
+            color: white;
+            letter-spacing: -0.5px;
+            word-spacing: 3px;
+          }
+          h1 {
+            font-size: 2rem;
+            line-height: 3.5rem;
+          }
+        }
+        .Hero_btnDiv {
+          @include Flex(row, space-between, center);
+          gap: 2rem;
+          max-width: 20rem;
+          width: 100%;
+          @media (max-width: 40em) {
+            @include Flex(row, flex-start, center);
+            gap: 1rem;
+          }
+        }
+      }
+    }
+  }
+  .sp {
+    position: absolute;
+    transform: translateX(20%);
+    z-index: 0;
+    filter: drop-shadow(7px 3px 8px #49e6f5);
+    animation: sparking 1s ease-in-out infinite alternate-reverse;
+  }
+  .spark3 {
+    scale: -1;
+    rotate: 63deg;
+    max-width: 13rem;
+  }
+  .GlowingBlub {
+    position: absolute;
+    bottom: 48%;
+    right: 35.5%;
+    background-color: #efeda6;
+    box-shadow: 1px 1px 49px 41px rgb(214, 214, 61);
+    max-width: 1px;
+    animation: glowing 2s infinite ease-in-out alternate-reverse;
+  }
+  .sparking {
+    max-width: 9.5rem;
+    filter: drop-shadow(1px 2px 10px yellow);
+  }
+}
+.logoSecWrapper {
+  width: 100%;
+  background-image: linear-gradient(180deg, #211c3a, $bk-color);
+  .logoSec {
+    @include Flex(row, space-around, center);
+    overflow: hidden;
+    background-image: linear-gradient(180deg, #211c3a, $bk-color);
+    max-width: 1250px;
+    margin: auto;
+    padding-block: 1.5rem;
+    img {
+      max-width: 8rem;
+      @media (max-width: 40em) {
+        max-width: 5rem;
+      }
+      @media (max-width: 30em) {
+        max-width: 3.5rem;
+      }
+    }
+  }
+}
+.telescope {
+  background-color: $bk-color;
+  padding: 4rem 0.5rem;
+  .telescopeWrapper {
+    @include Flex(column, flex-start, center);
+    gap: 3rem;
+    .text-tel {
+      @include Flex(column, flex-start, center);
+      gap: 1rem;
+    }
+    .points {
+      @include Flex(row, space-between, flex-start);
+      flex-wrap: wrap;
+      gap: 2rem 1.5rem;
+      width: 100%;
+      padding-block: 2rem;
+      @media (max-width: 40em) {
+        justify-content: center;
+        padding-block: 0rem;
+        gap: 1.5rem;
+      }
+      @media (max-width: 30em) {
+        gap: 1rem;
+      }
+      .point {
+        @include Flex(row, flex-start, flex-start);
+        max-width: 20rem;
+        width: 100%;
+        gap: 1.5rem;
+        img {
+          max-width: 5rem;
+        }
+        .pointText {
+          @include Flex(column, flex-start, flex-start);
+          gap: 1rem;
+          width: 100%;
+          h3 {
+            color: white;
+            font-family: $ff-H;
+            font-size: 0.9rem;
+          }
+          p {
+            font-family: $ff-H;
+            color: rgba(255, 255, 255, 0.342);
+            font-size: 0.75rem;
+            width: 100%;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+.radio {
+  @include Flex(row, space-between, flex-start);
+  background-color: $bk-color;
+  padding: 4rem 0.5rem;
+  @media (max-width: 45em) {
+    flex-direction: column-reverse;
+    padding: 3rem;
+  }
+  @media (max-width: 30em) {
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .radioText {
+    @include Flex(column, flex-start, flex-start);
+    flex-grow: 1;
+    flex-basis: 0;
+    gap: 1.5rem;
+    @media (max-width: 45em) {
+      justify-content: center;
+      align-items: center;
+      flex-basis: content;
+    }
+
+    p {
+      text-align: start;
+      line-height: 1.1;
+    }
+  }
+  .RadioImg {
+    @include Flex(column, center, center);
+    overflow: hidden;
+    flex-grow: 1;
+    flex-basis: 0;
+    background-image: url(../Components//Images/dt/elments.png);
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    @media (max-width: 45em) {
+      flex-basis: content;
+      width: 100%;
+    }
+    .manImg {
+      position: absolute;
+      bottom: 0;
+    }
+    .moonImg {
+      animation: rotation 7s infinite linear;
+    }
+  }
+}
+.nightSky {
+  @include Flex(row, space-between, flex-start);
+  position: relative;
+  background-color: $bk-color;
+  padding: 4rem 0.5rem;
+  @media (max-width: 45em) {
+    flex-direction: column;
+    padding: 3rem;
+  }
+  @media (max-width: 30em) {
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .nightImg {
+    @include Flex(column, flex-start, flex-end);
+    flex-grow: 1;
+    flex-basis: 0;
+    background-image: url(../Components/Images/dt/mob.png);
+    min-height: 39rem;
+    background-position: left 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @media (max-width: 45em) {
+      width: 100%;
+      background-position: center;
+    }
+
+    .marKerWrapper {
+      @include Flex(column, flex-end, flex-start);
+      width: 100%;
+      @media (max-width: 45em) {
+        align-items: center;
+      }
+    }
+    img {
+      padding: 4rem 10rem;
+      animation: up-down 1s ease-in-out alternate infinite;
+      filter: drop-shadow(1px 1px 60px white);
+      @media (max-width: 55em) {
+        padding: 4rem 16vw;
+      }
+      @media (max-width: 50em) {
+        padding: 4rem 18vw;
+      }
+      @media (max-width: 45em) {
+        padding: 4rem 16vw;
+        margin-left: 7rem;
+      }
+      @media (max-width: 30em) {
+        padding: 3rem 0;
+      }
+    }
+  }
+  .nightText {
+    @include Flex(column, flex-start, flex-start);
+    flex-grow: 1;
+    flex-basis: 0;
+    gap: 2rem;
+    @media (max-width: 45em) {
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+    }
+    p {
+      text-align: start;
+      @media (max-width: 45em) {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.footer {
+  @include Flex(column, flex-start, center);
+  background-image: url(../Components/Images/dt/bottom2.png);
+  color: white;
+  min-height: 25rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .footerTop {
+    padding: 4rem 0.5rem;
+    @include Flex(row, space-around, center);
+    max-width: 1100px;
+    width: 100%;
+    @media (max-width: 30em) {
+      flex-direction: column;
+    }
+    .footerlogo {
+      h1 {
+        font-family: $ff-n;
+        font-size: 3rem;
+        letter-spacing: 10px;
+      }
+      p {
+        font-family: $ff-H;
+        margin-top: 1rem;
+        font-size: 1rem;
+      }
+    }
+    ul {
+      padding: 0;
+      li {
+        font-family: $ff-H;
+        cursor: pointer;
+        &:hover {
+          color: #3a68bf;
+        }
+        @media (max-width: 30em) {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@keyframes sparking {
+  from {
+    filter: drop-shadow(7px 3px 10px #49e6f5);
+  }
+  to {
+    filter: drop-shadow(9px 6px 20px #49e6f5);
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes up-down {
+  from {
+    transform: translateY(0);
+    filter: drop-shadow(1px 1px 20px white);
+  }
+  to {
+    transform: translateY(2rem);
+    filter: drop-shadow(1px 1px 60px white);
+  }
+}
