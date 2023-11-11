@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-import menu from "./Images/menu.png";
-import cross from "./Images/cross.png";
+import menu from "./Images/menu.webp";
+import cross from "./Images/cross.webp";
 
 export default function Navbar() {
   const mobNav = useRef(null);

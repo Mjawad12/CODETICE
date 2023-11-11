@@ -1,8 +1,8 @@
 import React from "react";
-import logo1 from "./Images/Logo/logo1.png";
-import logo2 from "./Images/Logo/logo2.png";
-import logo3 from "./Images/Logo/logo3.png";
-import logo4 from "./Images/Logo/logo4.png";
+import logo1 from "./Images/Logo/logo1.webp";
+import logo2 from "./Images/Logo/logo2.webp";
+import logo3 from "./Images/Logo/logo3.webp";
+import logo4 from "./Images/Logo/logo4.webp";
 export default function LogosSec() {
   return (
     <div className="logoSecWrapper">

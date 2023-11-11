@@ -233,7 +233,7 @@ p.contentPar {
   width: 100vw;
   min-height: 100vh;
   height: 100%;
-  background-image: url(../Components/Images/MainImg.png);
+  background-image: url(../Components/Images/MainImg.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -515,7 +515,7 @@ p.contentPar {
   overflow: hidden;
   flex-grow: 1;
   flex-basis: 0;
-  background-image: url(../Components//Images/dt/elments.png);
+  background-image: url(../Components//Images/dt/elments.webp);
   background-position: center;
   background-size: contain;
   position: relative;
@@ -562,7 +562,7 @@ p.contentPar {
   align-items: flex-end;
   flex-grow: 1;
   flex-basis: 0;
-  background-image: url(../Components/Images/dt/mob.png);
+  background-image: url(../Components/Images/dt/mob.webp);
   min-height: 39rem;
   background-position: left 0;
   background-repeat: no-repeat;
@@ -642,7 +642,7 @@ p.contentPar {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-image: url(../Components/Images/dt/bottom2.png);
+  background-image: url(../Components/Images/dt/bottom2.webp);
   color: white;
   min-height: 25rem;
   background-position: center;

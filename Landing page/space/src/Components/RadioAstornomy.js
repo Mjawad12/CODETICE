@@ -1,6 +1,6 @@
 import React from "react";
-import moon from "./Images/dt/moon.png";
-import man from "./Images/dt/man.png";
+import moon from "./Images/dt/moon.webp";
+import man from "./Images/dt/man.webp";
 export default function RadioAstornomy() {
   return (
     <section className="radio">
@@ -20,8 +20,8 @@ export default function RadioAstornomy() {
         <button className="button">START NOW</button>
       </div>
       <div className="RadioImg">
-        <img className="moonImg" src={moon} alt="Image of moon"></img>
-        <img className="manImg" src={man} alt="Image of moon"></img>
+        <img className="moonImg" src={moon} alt=" moon"></img>
+        <img className="manImg" src={man} alt=" moon"></img>
       </div>
     </section>
   );

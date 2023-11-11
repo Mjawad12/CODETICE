@@ -1,11 +1,11 @@
 import React from "react";
-import Img from "./Images/dt/marker.png";
+import Img from "./Images/dt/marker.webp";
 export default function NightSky() {
   return (
     <section className="nightSky">
       <div className="nightImg">
         <div className="marKerWrapper">
-          <img src={Img} alt="image Of a Marker"></img>
+          <img src={Img} alt="Marker"></img>
         </div>
       </div>
       <div className="nightText">

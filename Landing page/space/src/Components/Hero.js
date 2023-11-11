@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Linear } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import spark from "./Images/spark.png";
-import bt from "./Images/homebt2.png";
+import spark from "./Images/spark.webp";
+import bt from "./Images/homebt2.webp";
 export default function Hero() {
   const t1 = useRef("");
   const t2 = useRef("");
@@ -105,7 +105,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <img className="btImg" src={bt} alt="bt-img"></img>
+        <img className="button" src={bt} alt="bt-img"></img>
       </div>
     </section>
   );

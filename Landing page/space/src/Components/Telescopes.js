@@ -1,10 +1,10 @@
 import React from "react";
-import camp from "./Images/logos/camp.png";
-import camera from "./Images/logos/camera.png";
-import book from "./Images/logos/book.png";
-import pointer from "./Images/logos/pointer.png";
-import mobile from "./Images/logos/mobile.png";
-import world from "./Images/logos/world.png";
+import camp from "./Images/logos/camp.webp";
+import camera from "./Images/logos/camera.webp";
+import book from "./Images/logos/book.webp";
+import pointer from "./Images/logos/pointer.webp";
+import mobile from "./Images/logos/mobile.webp";
+import world from "./Images/logos/world.webp";
 export default function Telescopes() {
   const data = [
     {
@@ -61,11 +61,11 @@ export default function Telescopes() {
             data.map((it) => {
               return (
                 <>
-                  <div className="point">
-                    <img src={it.img}></img>
+                  <div key={it.name} className="point">
+                    <img src={it.img} alt={it.name}></img>
                     <div className="pointText">
-                      <h3>{it.name}</h3>
-                      <p>{it.description}</p>
+                      <h3> {it.name}</h3>
+                      <p> {it.description}</p>
                     </div>
                   </div>
                 </>
