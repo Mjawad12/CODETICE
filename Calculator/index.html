@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The best and reliable Calculator to perform intense caculations."
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/83163cee2a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--  Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!--                     -->
+    <title>Calco - The ultimate calculator</title>
+  </head>
+  <body>
+    <section class="main">
+      <section class="top">
+        <h1>Calco-The ultimate Caculator</h1>
+      </section>
+      <section class="screen">
+        <div class="answerDiv">
+          <div class="calculations">0</div>
+          <div class="Canswer">0</div>
+        </div>
+        <div class="btns">
+          <div class="child1">
+            <button class="no val trignofunc" data-value="sinh">sinh</button>
+            <button class="no val trignofunc" data-value="cosh">cosh</button>
+            <button class="no val trignofunc" data-value="tanh">tanh</button>
+            <button class="no val trignofunc" data-value="sin">sin</button>
+            <button class="no val trignofunc" data-value="cos">cos</button>
+            <button class="no val trignofunc" data-value="tan">tan</button>
+          </div>
+          <div class="child1">
+            <button class="no val value_pie" data-value="π">π</button>
+            <button class="no val value_e" data-value="e">e</button>
+            <button class="no val log" data-value="log">log</button>
+            <button class="no diveby numbers" data-value="1/">1/x</button>
+            <button class="no clear-btn">AC</button>
+            <button class="no val back" data-value="back">
+              <i class="fas fa-backspace"></i>
+            </button>
+          </div>
+          <div class="child1">
+            <button class="no square sq" data-inde="2">x²</button>
+            <button class="no cube sq" data-inde="3">x³</button>
+            <button class="no power10 sq2" data-value="10^">10ˣ</button>
+            <button class="no Functions" data-value="&#40;">&#40;</button>
+            <button class="no Functions" data-value="&#41;">&#41;</button>
+            <button
+              class="no calculatorSymbol"
+              data-value="/"
+              data-type="calculationSymbol"
+            >
+              <i class="fa-solid fa-divide"></i>
+            </button>
+          </div>
+          <div class="child1">
+            <button class="no Functions val memoryclear" data-value="MC">
+              MC
+            </button>
+            <button class="no Functions val memoryStore" data-value="MS">
+              MS
+            </button>
+            <button class="no numbers" data-value="7">7</button>
+            <button class="no numbers" data-value="8">8</button>
+            <button class="no numbers" data-value="9">9</button>
+            <button
+              class="no calculatorSymbol"
+              data-value="*"
+              data-type="calculationSymbol"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="child1">
+            <button class="no Functions val memory++" data-value="M+">
+              M+
+            </button>
+            <button class="no Functions val memory--" data-value="M-">
+              M-
+            </button>
+            <button class="no numbers" data-value="4">4</button>
+            <button class="no numbers" data-value="5">5</button>
+            <button class="no numbers" data-value="6">6</button>
+            <button
+              class="no calculatorSymbol"
+              data-value="+"
+              data-type="calculationSymbol"
+            >
+              +
+            </button>
+          </div>
+          <div class="child1">
+            <button class="no numbers" data-value="%">%</button>
+            <button class="no val ln" data-value="ln">ln</button>
+            <button class="no numbers" data-value="1">1</button>
+            <button class="no numbers" data-value="2">2</button>
+            <button class="no numbers" data-value="3">3</button>
+            <button
+              class="no calculatorSymbol"
+              data-value="-"
+              data-type="calculationSymbol"
+            >
+              -
+            </button>
+          </div>
+          <div class="child1">
+            <button class="no Functions val memoryShow" data-value="M-">
+              MR
+            </button>
+            <button class="no numbers" data-value="0">0</button>
+            <button
+              class="no CalculateResult"
+              data-value="="
+              data-type="calculationSymbol"
+            >
+              =
+            </button>
+          </div>
+        </div>
+      </section>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>

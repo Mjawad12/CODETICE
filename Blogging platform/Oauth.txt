@@ -1,0 +1,2 @@
+clientID :  1027082280310-j408qpvpfcgbbjjp0noi98rhj448dvbf.apps.googleusercontent.com
+clientSecret : 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
